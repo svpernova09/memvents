@@ -6,7 +6,9 @@
     "type": "project",
     "require": {
         "php": ">=5.5.9",
-        "laravel/framework": "5.1.*"
+        "laravel/framework": "5.1.*",
+        "dms/meetup-api-client": "~2.0",
+        "j7mbo/twitter-api-php": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "dev-master",
