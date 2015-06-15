@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Memvents
+        psr4_prefix: Memvents
+        src_path: app
