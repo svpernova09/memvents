@@ -15,5 +15,6 @@ class Event extends Model
         'time',
         'status',
         'event_url',
+        'created'
     ];
 }
