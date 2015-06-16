@@ -18,14 +18,16 @@ Route::get('/', function () {
 
 Route::get('/test', function() {
     // Key Authentication
-//    $client = MeetupKeyAuthClient::factory(array('key' => env('meetup_api')));
+    $client = MeetupKeyAuthClient::factory(array('key' => env('meetup_api')));
 //    $response = $client->getGroups(['group_urlname' => 'memphis-technology-user-groups']);
 //    $response = $client->getEvents(['group_urlname' => 'memphis-technology-user-groups']);
 //    echo "<pre>";
 //    dd( $response );
 //    $response = $client->getRsvps(array('event_id' => '222969071'));
-//
-//    foreach ($response as $responseItem) {
-//        echo $responseItem['member']['name'] . '<br/>';
+
+//$response = \Memvents\Event::getSampleEvents();
+//$events = json_decode($response, true);
+//    foreach ($events['results'] as $responseItem) {
+//        var_dump( $responseItem);
 //    }
 });
