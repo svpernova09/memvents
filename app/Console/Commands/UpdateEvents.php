@@ -58,9 +58,19 @@ class UpdateEvents extends Command
 
             if ($this->findEvent($event['created'], $event['id']))
             {
-                $meetup['id'] = $this->findEvent($event['created'], $event['id'])->id;
                 $this->info('Updating: ' . $meetup['name']);
-                $this->memvent->update($meetup);
+                $meetup['id'] = $this->findEvent($event['created'], $event['id'])->id;
+                // find meetup in our db
+                $meet_up = $this->memvent->find($meetup['id']);
+                // Update values
+                $meet_up->name = $meetup['name'];
+                $meet_up->event_id = $meetup['event_id'];
+                $meet_up->time = $meetup['time'];
+                $meet_up->status = $meetup['status'];
+                $meet_up->event_url = $meetup['event_url'];
+                $meet_up->created = $meetup['created'];
+
+                $meet_up->save();
             }
             else
             {
@@ -74,8 +84,8 @@ class UpdateEvents extends Command
     {
 
         return $this->memvent->where('created', $created)
-            ->where('event_id', $event_id)
-            ->first();
+                             ->where('event_id', $event_id)
+                             ->first();
     }
 
 }
