@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         \Memvents\Console\Commands\Inspire::class,
+        \Memvents\Console\Commands\UpdateEvents::class,
     ];
 
     /**
