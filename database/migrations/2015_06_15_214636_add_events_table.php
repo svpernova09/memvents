@@ -19,6 +19,7 @@ class AddEventsTable extends Migration
             $table->string('time');
             $table->string('status');
             $table->text('event_url');
+            $table->text('created');
             $table->timestamps();
         });
     }
