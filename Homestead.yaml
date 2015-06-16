@@ -19,6 +19,7 @@ sites:
 
 databases:
     - homestead
+    - homestead_test
 
 variables:
     - key: APP_ENV
