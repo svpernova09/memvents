@@ -1,5 +1,7 @@
 <?php
 use DMS\Service\Meetup\MeetupKeyAuthClient;
+use Carbon\Carbon;
+use Memvents\Event;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -17,8 +19,15 @@ Route::get('/', function () {
 
 
 Route::get('/test', function() {
+
+//    $eventModel = new Event;
+//    $events7 = $eventModel->getEventsWithin7Days();
+//
+//    dd($events7);
+//
+
     // Key Authentication
-    $client = MeetupKeyAuthClient::factory(array('key' => env('meetup_api')));
+//    $client = MeetupKeyAuthClient::factory(array('key' => env('meetup_api')));
 //    $response = $client->getGroups(['group_urlname' => 'memphis-technology-user-groups']);
 //    $response = $client->getEvents(['group_urlname' => 'memphis-technology-user-groups']);
 //    echo "<pre>";
