@@ -78,6 +78,7 @@ class UpdateEvents extends Command
                 $this->memvent->create($meetup);
             }
         }
+        $this->info('All Done!');
     }
 
     public function findEvent($created, $event_id)
