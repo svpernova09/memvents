@@ -13,7 +13,9 @@ class UpdateEvents extends Command
      *
      * @var string
      */
-    protected $signature = 'memvents:update';
+    protected $signature = 'memvents:update
+                            {--debug : no API calls, no DB writes}
+                            ';
 
     /**
      * The console command description.
@@ -40,9 +42,24 @@ class UpdateEvents extends Command
      */
     public function handle()
     {
+        if ($this->option('debug'))
+        {
+            $this->info('Running in debug mode, no API calls or DB writes');
+        }
         // Get Events
-        $client = MeetupKeyAuthClient::factory(array('key' => env('meetup_api')));
-        $events = $client->getEvents(['group_urlname' => 'memphis-technology-user-groups']);
+        if (!$this->option('debug')) {
+            $client = MeetupKeyAuthClient::factory( array( 'key' => env( 'meetup_api' ) ) );
+            $events = $client->getEvents( [ 'group_urlname' => 'memphis-technology-user-groups' ] );
+        }
+        if ($this->option('debug'))
+        {
+            // no Api calls, fake the response
+            $response = $this->memvent->getSampleEvents();
+            $events_array = json_decode($response, true);
+            $events = $events_array['results'];
+        }
+
+        $this->output->progressStart(count($events));
 
         foreach ($events as $event)
         {
@@ -70,13 +87,28 @@ class UpdateEvents extends Command
                 $meet_up->event_url = $meetup['event_url'];
                 $meet_up->created = $meetup['created'];
 
-                $meet_up->save();
+                if (!$this->option('debug'))
+                {
+                    $meet_up->save();
+                }
+                if ($this->option('debug'))
+                {
+                    $this->info('Should have updated: ' . $meetup['name']);
+                }
             }
             else
             {
                 $this->info('Creating: ' . $meetup['name']);
-                $this->memvent->create($meetup);
+                if (!$this->option('debug'))
+                {
+                    $this->memvent->create($meetup);
+                }
+                if ($this->option('debug'))
+                {
+                    $this->info('Should have created: ' . $meetup['name']);
+                }
             }
+            $this->output->progressAdvance();
         }
         $this->info('All Done!');
     }
