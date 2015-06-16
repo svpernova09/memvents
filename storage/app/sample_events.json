@@ -1,0 +1,93 @@
+{
+    "results": [
+        {
+            "utc_offset": -18000000,
+            "venue": {
+                "country": "US",
+                "city": "Memphis",
+                "address_1": "5336 Poplar Ave",
+                "name": "Newk's Express Cafe",
+                "lon": -89.883904,
+                "id": 20370982,
+                "lat": 35.107414,
+                "repinned": false
+            },
+            "headcount": 0,
+            "visibility": "public",
+            "waitlist_count": 0,
+            "created": 1428443309000,
+            "maybe_rsvp_count": 0,
+            "description": "<p>This is a weekly lunch meetup in the East Memphis area. The location will change each week, so check back often to see where we'll be meeting at.</p> <p>Come and discuss technology, business, phones,and software with other Memphians. This meetup is informal and has no presentations or set agenda.</p> <p><br/>RSVP's are not required.</p>",
+            "event_url": "http://www.meetup.com/memphis-technology-user-groups/events/223258313/",
+            "yes_rsvp_count": 3,
+            "announced": false,
+            "name": "East Memphis MemTech Lunch - Weekly",
+            "id": "zwhmglytjbwb",
+            "time": 1434558600000,
+            "updated": 1434376503000,
+            "group": {
+                "join_mode": "open",
+                "created": 1267312996000,
+                "name": "Memphis Technology User Groups",
+                "group_lon": -90.05000305175781,
+                "id": 1606258,
+                "urlname": "memphis-technology-user-groups",
+                "group_lat": 35.150001525878906,
+                "who": "Techies"
+            },
+            "status": "upcoming"
+        },
+        {
+            "utc_offset": -18000000,
+            "venue": {
+                "country": "US",
+                "city": "Memphis",
+                "address_1": "6465 N. Quail Hollow Rd., Suite 200",
+                "name": "Microsoft Corp",
+                "lon": -89.848305,
+                "id": 18285642,
+                "lat": 35.103214,
+                "repinned": false
+            },
+            "headcount": 0,
+            "visibility": "public",
+            "waitlist_count": 0,
+            "created": 1422646230000,
+            "maybe_rsvp_count": 0,
+            "description": "<p>Join us Thursday, June 18th, as Adam Belebczuk helps us learn about SQL Server's AlwaysOn Availability Groups.</p> <p>As usual, pizza will be served around 5:30 PM and the meeting will start at 6 PM.</p> <p>For those that might be arriving after 5:30, the door and elevator code is will be 2111#</p> <p><b>Abstract:</b></p> <p>One of the most talked about new features in Microsoft SQL Server is AlwaysOn Availability Groups. In this session, we'll cover the pros and cons of using Availability Groups as well as the basics of how to set them up and take advantage of readable secondary replicas. If you want to improve the availability and performance of your applications and databases, are currently using Database Mirroring, or if you're just curious about Availability Groups, then you won't want to miss this session.</p> <p><b>Bio:</b></p> <p>Adam Belebczuk is a Consultant, Accidental DBA, and Developer with over 10 years of experience in IT, ranging from customer service to server/network administration to software and database development. Adam holds the MCSE: Data Platform and MCITP DBA 2005/2008 certifications, is a frequent speaker at SQL Server Users Groups and SQL Saturday events, and specializes in SQL development, performance tuning, high availability, &amp; disaster recovery.</p>",
+            "event_url": "http://www.meetup.com/memphis-technology-user-groups/events/220193017/",
+            "yes_rsvp_count": 10,
+            "announced": true,
+            "name": "Memphis PASS Chapter (SQL Sever User Group)",
+            "id": "qmmzjkytjbpb",
+            "time": 1434666600000,
+            "updated": 1433774351000,
+            "group": {
+                "join_mode": "open",
+                "created": 1267312996000,
+                "name": "Memphis Technology User Groups",
+                "group_lon": -90.05000305175781,
+                "id": 1606258,
+                "urlname": "memphis-technology-user-groups",
+                "group_lat": 35.150001525878906,
+                "who": "Techies"
+            },
+            "status": "upcoming"
+        }
+    ],
+    "meta": {
+        "next": "https://api.meetup.com/2/events?offset=1&sign=True&format=json&limited_events=False&group_urlname=memphis-technology-user-groups&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming",
+        "method": "Events",
+        "total_count": 391,
+        "link": "https://api.meetup.com/2/events",
+        "count": 20,
+        "description": "Access Meetup events using a group, member, or event id. Events in private groups are available only to authenticated members of those groups. To search events by topic or location, see [Open Events](/meetup_api/docs/2/open_events).",
+        "lon": "",
+        "title": "Meetup Events v2",
+        "url": "https://api.meetup.com/2/events?offset=0&sign=True&format=json&limited_events=False&group_urlname=memphis-technology-user-groups&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming",
+        "signed_url": "https://api.meetup.com/2/events?offset=0&format=json&limited_events=False&group_urlname=memphis-technology-user-groups&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=12418677&sig=88822493a52afc80e7e4b923ea40733dc7734fdb",
+        "id": "",
+        "updated": 1434380397000,
+        "lat": ""
+    }
+}
